@@ -6,7 +6,9 @@
 .lmj-options {
     width: 25%; /* Ajustez la largeur selon vos besoins */
     padding: 16px;
-    box-sizing: border-box;
+    background-color: oldlace;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .lmj-plant-list {
@@ -17,13 +19,31 @@
     justify-content: center;
     width: 75%;
     box-sizing: border-box;
+    
 }
 
 
 
-.lmj-plant-item-container button {
-    margin-top: 8px; /* Ajoute un espace en dessous du bouton */
-    margin-left: 50%; /* Ajoute un espace au-dessus du bouton */
-    transform: translateX(-50%); /* Déplace le bouton de 50% de sa propre largeur vers la gauche */
-    margin-bottom: 16px; /* Ajoute un espace en dessous du bouton */
+.lmj-plant-item-container  {
+    border: 1px solid green;
+    margin: 16px;
+    border-radius: 5%;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    background-color: oldlace;
+}
+
+.lmj-plant-item-container button{
+    background-color: #31b572;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 16px;
+}
+
+.lmj-plant-item-container button:hover {
+    background-color: #208653;
 }

@@ -5,12 +5,14 @@ import PlantItem from "./PlantItem.jsx"
 import { useState } from "react"
 import Categories from "./Categories.jsx"
 import Search from "./Search.jsx"
-import info_icon from "../assets/info.png"
 
 function ShoppingList({ cart, updateCart }) {
 
 	const [activeCategory, setActiveCategory] = useState('')
-	const categories = plantList.reduce(
+	const [search, setSearch] = useState('');
+    let hasResults = false;
+    
+    const categories = plantList.reduce(
 		(acc, plant) =>
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
 		[]
@@ -33,7 +35,7 @@ function ShoppingList({ cart, updateCart }) {
     }
     return (<div className="lmj-shopping-list">
         <div className="lmj-options">
-            <Search />
+            <Search search={search} setSearch={setSearch} />
             <Categories
                 categories={categories}
                 activeCategory={activeCategory}
@@ -42,7 +44,8 @@ function ShoppingList({ cart, updateCart }) {
         </div>
         <ul className='lmj-plant-list'>
             {plantList.map(({id, cover, name, water, light, isBestSale, isSpecialOffer, price}) => (
-                !activeCategory || activeCategory === name ?(
+                (!activeCategory || activeCategory === name)  && (!search || name.toLowerCase().includes(search.toLowerCase())) ? (
+                    hasResults = true,
                     <div key={id} className="lmj-plant-item-container">
                         <PlantItem
                                 key={id}
@@ -59,6 +62,7 @@ function ShoppingList({ cart, updateCart }) {
                     </div>
                 ) : null
                 ))}
+                {!hasResults && <p>No plants match with your criteria</p>}
         </ul>
     </div>)
 }

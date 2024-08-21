@@ -9,8 +9,9 @@ function PlantItem({ id, cover, name, water, light, price, isBestSale, isSpecial
                 <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
             </div>
             <div className="lmj-plant-item-name">
-                {isBestSale && <span>{name} 🔥</span>}
-                {!isBestSale && <span>{name}</span>}
+                <span>{name}</span>
+                {/* {isBestSale && <span>{name} 🔥</span>} */}
+                {/* {!isBestSale && <span>{name}</span>} */}
                 <div>{price}€</div>
                 </div>
             {/* <div className="carescale_item">

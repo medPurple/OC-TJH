@@ -22,7 +22,7 @@ function Footer() {
 				Pour les passionné·e·s de plantes 🌿🌱🌵
 			</div>
 			<div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
-			<input onChange={handleInput} value={inputValue} onBlur={handleBlur}/>
+			<input className='lmj-footer-input' onChange={handleInput} value={inputValue} onBlur={handleBlur}/>
 		</footer>
 	)
 }

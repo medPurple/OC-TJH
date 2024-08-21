@@ -1,11 +1,17 @@
 .lmj-banner {
     color: black;
-    background-color: #f8f9fa;
-    border-bottom: solid 3px black;
+    background-color: seagreen;
+    border-bottom: solid 2px black;
     display: flex;
     justify-content: space-between; /* Aligne le titre à gauche et le panier à droite */
     align-items: center;
-    padding: 10px;
+    position: sticky;
+    padding-left: 3%;
+    padding-right: 3%;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+
 }
 
 .lmj-logo {

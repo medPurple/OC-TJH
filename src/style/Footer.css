@@ -1,14 +1,21 @@
 .lmj-footer {
 	color: black;
-	padding: 32px;
-	border-top: solid 3px black;
+	background-color: seagreen;
+	padding: 1%;
+	border-top: solid 2px black;
 	display: flex;
-	justify-content: flex-start;
 	flex-direction: column;
 	align-items: center;
 	font-weight: 500;
+	border-radius: 10px 10px 0 0;
 }
 
 .lmj-footer-elem {
 	margin-bottom: 10px;
+}
+
+.lmj-footer-input {
+    border-radius: 8px; /* Ajustez la valeur pour obtenir le degré d'arrondi souhaité */
+    padding: 8px; /* Ajoutez un peu de padding pour un meilleur rendu visuel */
+    border: 1px solid #ccc; /* Ajoutez une bordure pour mieux voir l'arrondi */
 }
