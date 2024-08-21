@@ -1,0 +1,29 @@
+.lmj-shopping-list {
+    display: flex;
+    width: 100%;
+}
+
+.lmj-options {
+    width: 25%; /* Ajustez la largeur selon vos besoins */
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.lmj-plant-list {
+    list-style-type: none;
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+    box-sizing: border-box;
+}
+
+
+
+.lmj-plant-item-container button {
+    margin-top: 8px; /* Ajoute un espace en dessous du bouton */
+    margin-left: 50%; /* Ajoute un espace au-dessus du bouton */
+    transform: translateX(-50%); /* Déplace le bouton de 50% de sa propre largeur vers la gauche */
+    margin-bottom: 16px; /* Ajoute un espace en dessous du bouton */
+}
